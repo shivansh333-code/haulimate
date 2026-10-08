@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kesari: #F4741F;
+  --color-neel: #1B3A6B;
+  --color-neel-dark: #12284C;
+  --color-neel-light: #244C8C;
+  --color-haldi: #F5C400;
+  --color-hara: #1E7F4F;
+  --color-laal: #C8322B;
+  --color-khadi: #FBF6EC;
+  --color-khadi-dark: #F3EBD9;
+  --color-kaala: #14171C;
+
+  --font-baloo: "Baloo 2", cursive, sans-serif;
+  --font-mukta: "Mukta", sans-serif;
+}
+
+@layer base {
+  html, body {
+    background-color: var(--color-khadi);
+    color: var(--color-kaala);
+    font-family: var(--font-mukta);
+    font-size: 17px;
+    line-height: 1.55;
+    /* Custom Small Truck Cursor */
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 9h13v15H2z' fill='%231B3A6B' stroke='%2314171C' stroke-width='1.5' rx='1'/%3E%3Cpath d='M15 12h7l4 5v7h-11z' fill='%23F4741F' stroke='%2314171C' stroke-width='1.5' rx='1'/%3E%3Cpolygon points='16,13 21,13 24,17 16,17' fill='%2387CEEB'/%3E%3Ccircle cx='7' cy='24' r='3.5' fill='%2314171C'/%3E%3Ccircle cx='7' cy='24' r='1.5' fill='%23FFFFFF'/%3E%3Ccircle cx='21' cy='24' r='3.5' fill='%2314171C'/%3E%3Ccircle cx='21' cy='24' r='1.5' fill='%23FFFFFF'/%3E%3Ccircle cx='3' cy='3' r='2' fill='%23F4741F'/%3E%3C/svg%3E") 3 3, auto;
+  }
+
+  button, a, input[type="submit"], input[type="button"], [role="button"], select, .cursor-pointer {
+    /* Interactive Pointer: Truck with glowing headlights */
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath d='M2 10h14v16H2z' fill='%231B3A6B' stroke='%2314171C' stroke-width='1.5' rx='1'/%3E%3Cpath d='M16 13h8l4 5v8h-12z' fill='%23F4741F' stroke='%2314171C' stroke-width='1.5' rx='1'/%3E%3Cpolygon points='17,14 23,14 26,18 17,18' fill='%2387CEEB'/%3E%3Cpolygon points='28,19 36,15 36,27 28,23' fill='%23F5C400' fill-opacity='0.75'/%3E%3Ccircle cx='8' cy='26' r='3.5' fill='%2314171C'/%3E%3Ccircle cx='8' cy='26' r='1.5' fill='%23FFFFFF'/%3E%3Ccircle cx='23' cy='26' r='3.5' fill='%2314171C'/%3E%3Ccircle cx='23' cy='26' r='1.5' fill='%23FFFFFF'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='%23F5C400'/%3E%3C/svg%3E") 3 3, pointer;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-baloo);
+    line-height: 1.15;
+    font-weight: 700;
+  }
+}
+
+@keyframes pingShort {
+  0% { transform: scale(0.7) translate(-50%, -50%); opacity: 1; }
+  100% { transform: scale(1.4) translate(-50%, -80%); opacity: 0; }
+}
+
+.animate-ping-short {
+  animation: pingShort 0.65s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+/* Truck-Art Signboard Button Styles */
+.signboard-btn-primary {
+  background-color: var(--color-kesari);
+  color: #ffffff;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4), 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: all 0.15s ease-in-out;
+}
+.signboard-btn-primary:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+.signboard-btn-primary:active {
+  transform: translateY(1px);
+}
+
+.signboard-btn-neel {
+  background-color: var(--color-neel);
+  color: #ffffff;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 2px rgba(245, 196, 0, 0.45), 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: all 0.15s ease-in-out;
+}
+.signboard-btn-neel:hover {
+  background-color: var(--color-neel-dark);
+  transform: translateY(-1px);
+}
+
+.signboard-btn-outline {
+  background-color: transparent;
+  color: var(--color-neel);
+  border: 2px solid var(--color-neel);
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  border-radius: 6px;
+  transition: all 0.15s ease-in-out;
+}
+.signboard-btn-outline:hover {
+  background-color: rgba(27, 58, 107, 0.08);
+}
+
+/* Milestone KM-Stone Style */
+.milestone-stone {
+  position: relative;
+  background-color: #F5C400;
+  border: 3px solid #14171C;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+.milestone-stone::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background-color: #14171C;
+}
+
+/* Card 3D Flip */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}

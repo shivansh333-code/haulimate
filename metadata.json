@@ -1,0 +1,6 @@
+{
+  "name": "HauliMate",
+  "description": "India's professional trucking platform connecting transporters with verified, trained, and uniformed truck drivers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
